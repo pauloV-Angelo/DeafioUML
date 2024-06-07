@@ -27,7 +27,7 @@ public class Main {
 	while(!opcao.equals("OK")) {
 		opcao = terminal.nextLine();
 		if(!opcao.equals("OK"))
-			iphoneDemo.adicionarNumerosTelefonicos(opcao);
+			iphoneDemo.adicionarNumeros(opcao);
 	}
 	
 	System.out.println("Vamos demonstrar o reprodutor musical");

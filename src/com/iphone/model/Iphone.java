@@ -13,10 +13,15 @@ private List<String> musicas;
 private List<String> numeros;
 private String musicaSelecionada;
 
+
+// construtor
 public Iphone() {
 	this.musicas = new ArrayList<>();
 	this.numeros = new ArrayList<>();
 }
+
+
+// getters para os atributos (não precisam de setters)
 public List<String> getMusicas() {
 	return musicas;
 }
@@ -25,13 +30,20 @@ public List<String> getNumeros() {
 	return numeros;
 }
 
+public String getMusicaSelecionada() {
+	return musicaSelecionada;
+}
+
+
+// métodos únicos do Iphone 
 public void adicionarMusicas(String musica){
 	musicas.add(musica);
 }
 
-public void adicionarNumerosTelefonicos(String numero){
+public void adicionarNumeros(String numero){
 	numeros.add(numero);
 }
+
 
 // Implementação dos métodos da interface ReprodutorMusical
 @Override
@@ -54,7 +66,8 @@ public void selecionarMusica(String musica) {
 		}
 	}
 
-//
+
+// Implementação dos métodos da interface AparelhoTelefonico
 @Override
 public void ligar(String numero) {
 	System.out.println("Ligando para: " + numero);
@@ -72,7 +85,7 @@ public void iniciarCorreioVoz() {
 }
 
 
-
+//Implementação dos métodos da interface NavegadorInternet
 @Override
 public void exibirPagina(String url) {
 	System.out.println("exibindo página da url:" + url);
